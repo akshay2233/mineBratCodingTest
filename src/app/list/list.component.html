@@ -1,0 +1,26 @@
+
+<div class="container container-table">
+    <div class="card" style="width: 18rem;margin: 20px;">
+        <div class="card-body">
+            <form [formGroup]="cityFormGroup" (ngSubmit)="fnSubmit()">
+                <div class="form-group">
+                    <select  (change)="fnChangeState()"   class="form-control" formControlName="state" id="exampleFormControlSelect1">
+                        <option></option>
+                        <ng-container *ngFor="let list of stateList">
+                            <option [value]="list.stateId">{{list.stateName}}</option>
+                        </ng-container>
+                    </select>
+                    <span class="error"
+                        *ngIf="isClicked && cityFormGroup.controls['state'].invalid && cityFormGroup.controls['state'].errors.required">
+                        Select State </span>
+                </div>
+                <div>
+                    <app-city-list></app-city-list>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

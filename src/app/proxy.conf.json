@@ -1,0 +1,9 @@
+{
+    "/rest": {
+   "target": "http://api.minebrat.com",
+   "pathRewrite": {
+     "^/rest": ""
+   },
+   "secure": false
+   }
+   }

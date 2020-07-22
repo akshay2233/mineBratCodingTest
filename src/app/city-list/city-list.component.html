@@ -1,0 +1,12 @@
+<form [formGroup]="cityFormGroup">
+    <div class="form-group">
+        <select class="form-control" (change)="fnChangeCity()"   formControlName="city" id="exampleFormControlSelect1">
+            <option></option>
+            <ng-container *ngFor="let list of cityList">
+                <option [value]="list.cityName">{{list.cityName}}</option>
+            </ng-container>
+        </select>
+        
+    </div>   
+
+</form>

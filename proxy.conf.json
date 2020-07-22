@@ -1,0 +1,8 @@
+{
+    "/api": {
+   "target": "http://api.minebrat.com", 
+   "secure": false,
+   "changeOrigin":true,
+   "logLevel":"debug"
+   }
+   }
